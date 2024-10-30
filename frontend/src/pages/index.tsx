@@ -1,7 +1,19 @@
 import React from 'react';
 
-const index: React.FC = () => {
-  return <div> Hello james maxi nothing compile hhhh</div>;
+const Index: React.FC = () => {
+  return
+   <div className='homePage'> 
+   <div className='hero'>
+    <div className='hero__left'>
+
+    </div>
+    <div className='hero__right'>
+
+    </div>
+   </div>
+
+
+  </div>;
 };
 
-export default index;
+export default Index;
