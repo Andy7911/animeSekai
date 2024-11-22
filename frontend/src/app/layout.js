@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "../styles/vars.scss";
+import { Suspense } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,9 +18,11 @@ const geistMono = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head></head>
       <body
        
       >
+        <Suspense fallback={<div>Loading ...</div>}/>
         {children}
       </body>
     </html>

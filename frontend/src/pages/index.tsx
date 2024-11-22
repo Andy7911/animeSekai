@@ -1,7 +1,19 @@
-import React from 'react';
+'use client'
+import React,{useEffect,useState} from 'react';
 
 const Index: React.FC = () => {
-  return<div className='homePage'>
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(()=>{
+    setTimeout(()=>{
+setIsLoading(false)
+    },2000)
+  },[])
+
+  if (isLoading){
+    return<div> Loading...</div>
+  }
+  return(<div className='homePage'>
     <div className='hero'>
       <div className='hero__left'>
         <h1>ggwwga</h1>
@@ -12,7 +24,7 @@ const Index: React.FC = () => {
     </div>
 
 
-  </div>;
+  </div>);
 };
 
 export default Index;
